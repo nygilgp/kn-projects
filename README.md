@@ -75,6 +75,12 @@ Then we difine the model and prompt, add it to the route, so as the generate the
     if __name__ == "__main__":
       uvicorn.run(app, host="localhost", port=8000)
 
+You can view the docs after running:
+
+> python app.py
+
+Visit to see api documentation: http://localhost:8000/docs
+
 In the client app, we can invoke the api as below:
 
     def get_openai_response(input_text):
@@ -87,3 +93,9 @@ In the client app, we can invoke the api as below:
 
     if input_text_essay:
       st.write(get_openai_response(input_text_essay))
+
+Then run:
+
+> streamlit run api/client.py
+
+Visit: http://localhost:8501/
